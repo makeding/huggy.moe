@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>huggy</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.0/dist/css/mdui.min.css"
+        integrity="sha384-2PJ2u4NYg6jCNNpv3i1hK9AoAqODy6CdiC+gYiL2DVx+ku5wzJMFNdE3RoWfBIRP" crossorigin="anonymous" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <style>
+        .page {
+            opacity: .89;
+            margin-bottom: 6.4px;
+        }
+
+        .subtitle::before {
+            content: '> ';
+            color: #ff69b4;
+        }
+
+        body {
+            background-color: #ff69b4;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 100 60'%3E%3Cg %3E%3Crect fill='%23ff69b4' width='11' height='11'/%3E%3Crect fill='%23ff6ab1' x='10' width='11' height='11'/%3E%3Crect fill='%23ff6cae' y='10' width='11' height='11'/%3E%3Crect fill='%23ff6eac' x='20' width='11' height='11'/%3E%3Crect fill='%23ff70a9' x='10' y='10' width='11' height='11'/%3E%3Crect fill='%23ff71a7' y='20' width='11' height='11'/%3E%3Crect fill='%23ff73a4' x='30' width='11' height='11'/%3E%3Crect fill='%23ff75a2' x='20' y='10' width='11' height='11'/%3E%3Crect fill='%23ff789f' x='10' y='20' width='11' height='11'/%3E%3Crect fill='%23ff7a9d' y='30' width='11' height='11'/%3E%3Crect fill='%23ff7c9b' x='40' width='11' height='11'/%3E%3Crect fill='%23ff7e99' x='30' y='10' width='11' height='11'/%3E%3Crect fill='%23ff8197' x='20' y='20' width='11' height='11'/%3E%3Crect fill='%23ff8395' x='10' y='30' width='11' height='11'/%3E%3Crect fill='%23ff8693' y='40' width='11' height='11'/%3E%3Crect fill='%23ff8891' x='50' width='11' height='11'/%3E%3Crect fill='%23ff8b90' x='40' y='10' width='11' height='11'/%3E%3Crect fill='%23ff8d8e' x='30' y='20' width='11' height='11'/%3E%3Crect fill='%23ff908d' x='20' y='30' width='11' height='11'/%3E%3Crect fill='%23ff938b' x='10' y='40' width='11' height='11'/%3E%3Crect fill='%23ff958a' y='50' width='11' height='11'/%3E%3Crect fill='%23ff9889' x='60' width='11' height='11'/%3E%3Crect fill='%23ff9a88' x='50' y='10' width='11' height='11'/%3E%3Crect fill='%23ff9d88' x='40' y='20' width='11' height='11'/%3E%3Crect fill='%23ffa087' x='30' y='30' width='11' height='11'/%3E%3Crect fill='%23ffa286' x='20' y='40' width='11' height='11'/%3E%3Crect fill='%23ffa586' x='10' y='50' width='11' height='11'/%3E%3Crect fill='%23ffa786' x='70' width='11' height='11'/%3E%3Crect fill='%23ffaa85' x='60' y='10' width='11' height='11'/%3E%3Crect fill='%23ffac85' x='50' y='20' width='11' height='11'/%3E%3Crect fill='%23ffaf86' x='40' y='30' width='11' height='11'/%3E%3Crect fill='%23ffb286' x='30' y='40' width='11' height='11'/%3E%3Crect fill='%23ffb486' x='20' y='50' width='11' height='11'/%3E%3Crect fill='%23ffb787' x='80' width='11' height='11'/%3E%3Crect fill='%23ffb987' x='70' y='10' width='11' height='11'/%3E%3Crect fill='%23ffbb88' x='60' y='20' width='11' height='11'/%3E%3Crect fill='%23ffbe89' x='50' y='30' width='11' height='11'/%3E%3Crect fill='%23ffc08a' x='40' y='40' width='11' height='11'/%3E%3Crect fill='%23ffc38b' x='30' y='50' width='11' height='11'/%3E%3Crect fill='%23ffc58c' x='90' width='11' height='11'/%3E%3Crect fill='%23ffc78e' x='80' y='10' width='11' height='11'/%3E%3Crect fill='%23ffca8f' x='70' y='20' width='11' height='11'/%3E%3Crect fill='%23fdcc91' x='60' y='30' width='11' height='11'/%3E%3Crect fill='%23fcce93' x='50' y='40' width='11' height='11'/%3E%3Crect fill='%23fbd095' x='40' y='50' width='11' height='11'/%3E%3Crect fill='%23fad297' x='90' y='10' width='11' height='11'/%3E%3Crect fill='%23f9d599' x='80' y='20' width='11' height='11'/%3E%3Crect fill='%23f8d79b' x='70' y='30' width='11' height='11'/%3E%3Crect fill='%23f7d99d' x='60' y='40' width='11' height='11'/%3E%3Crect fill='%23f6dba0' x='50' y='50' width='11' height='11'/%3E%3Crect fill='%23f5dda2' x='90' y='20' width='11' height='11'/%3E%3Crect fill='%23f4dfa4' x='80' y='30' width='11' height='11'/%3E%3Crect fill='%23f3e1a7' x='70' y='40' width='11' height='11'/%3E%3Crect fill='%23f2e3aa' x='60' y='50' width='11' height='11'/%3E%3Crect fill='%23f1e5ac' x='90' y='30' width='11' height='11'/%3E%3Crect fill='%23f1e7af' x='80' y='40' width='11' height='11'/%3E%3Crect fill='%23f0e9b2' x='70' y='50' width='11' height='11'/%3E%3Crect fill='%23efeab5' x='90' y='40' width='11' height='11'/%3E%3Crect fill='%23efecb8' x='80' y='50' width='11' height='11'/%3E%3Crect fill='%23EEB' x='90' y='50' width='11' height='11'/%3E%3C/g%3E%3C/svg%3E");
+            background-attachment: fixed;
+            background-size: cover;
+            /* created by https://www.svgbackgrounds.com*/
+        }
+    </style>
+</head>
+
+<body class="mdui-theme-primary-indigo mdui-theme-accent-pink mdui-theme-layout-auto">
+
+    <div class="mdui-container">
+        <div class="mdui-card page">
+            <div class="mdui-card-primary">
+                <div style="text-align: center;font-size: 3rem;">huggy</div>
+            </div>
+            <div class="mdui-card-content" style="text-align: center;">18岁，大概还是学生</div>
+        </div>
+        <div class="mdui-card page">
+            <div class="mdui-card-content">
+                学习 html / php / javascript / vue / java / python / English / 日本語
+                <br>
+                会搞点黑苹果，但是好像又不会，所以买了白苹果
+                <br>
+                3 大桌面平台通吃，操作都顺手 Windows/macOS/Linux(KDE/Deepin/GNOME/Xfce)
+                <br>
+                熟悉 Linux 基本操作<del>以及删裤</del>
+                <br>
+                会玩服务器，爱拆东西（好多成废铁了）
+                <br>
+                Linux 基本用 Ubuntu / ArchLinux 发行版，喜欢 Arch 的滚动升级
+                <br>
+                现在的能力大概可以让 RouterOS 能 ping 通
+                <br>
+                比较喜欢捡电子垃圾，现在家里有一堆处理不掉的垃圾了 > _ >
+                <br>
+                热爱互联网，更爱开放的互联网，喜欢逛 GitHub 看新脑洞
+                <br>
+                平时爱写点没什么用的小工具，然而很多都中途弃坑了
+                <br>
+                喜欢动漫，已经补了无数番了，虽然日语没有什么长进
+                <br>
+                喜欢 Old School 相关内容以及技术，想了解这些东西的原理 (LGR/The 8-bit guy)
+            </div>
+        </div>
+        <div class="mdui-card page">
+            <div class="mdui-card-content">
+                <div class="mdui-row" style="border: royalblue;">
+                    <div class="mdui-col-sm-12 mdui-col-md-6">
+                        <h2 class="subtitle">关于我</h2>
+                        <ul class="mdui-list">
+                            <li class="mdui-list-item mdui-ripple">
+                                <i class="mdui-list-item-icon mdui-icon material-icons">cake</i>
+                                <div class="mdui-list-item-content">19 May 2002</div>
+                            </li>
+                            <li class="mdui-list-item mdui-ripple" mdui-tooltip="{content: '* 代表还在学习中'}">
+                                <i class="mdui-list-item-icon mdui-icon material-icons">translate</i>
+                                <div class="mdui-list-item-content">中文　/　English*　/　日本語*</div>
+                            </li>
+                            <li class="mdui-list-item mdui-ripple">
+                                <i class="mdui-list-item-icon mdui-icon material-icons">sms</i>
+                                <a class="mdui-list-item-content" href="tel:+1 (762) 233 3123">
+                                    +1 (762) 233 3123
+                                </a>
+                            </li>
+                            <li class="mdui-list-item mdui-ripple">
+                                <i class="mdui-list-item-icon mdui-icon material-icons">email</i>
+                                <a class="mdui-list-item-content" href="mailto:i@huggy.moe">i@huggy.moe</a>
+                            </li>
+                            <!--<li class="mdui-list-item mdui-ripple" mdui-tooltip="{content: '还没有'}">
+                                <i class="mdui-list-item-icon mdui-icon material-icons">account_balance</i>
+                                <div class="mdui-list-item-content">Undefined</div>
+                            </li>-->
+                        </ul>
+                    </div>
+                    <div class="mdui-col-sm-12 mdui-col-md-6">
+                        <h2 class="subtitle">一些链接</h2>
+                        <ul class="mdui-list">
+                            <li class="mdui-list-item mdui-ripple">
+                                <i class="mdui-list-item-icon mdui-icon material-icons">move_to_inbox</i>
+                                <a class="mdui-list-item-content" href="https://blog.huggy.moe"
+                                    target="_blog">blog.huggy.moe</a>
+                            </li>
+                            <li class="mdui-list-item mdui-ripple">
+                                <i class="mdui-list-item-icon"><svg viewBox="0 0 24 24">
+                                        <path fill="currentColor"
+                                            d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
+                                    </svg></i>
+                                </a>
+                                <a class="mdui-list-item-content" href="https://github.com/xiao201261"
+                                    target="_github">xiao201261</a>
+                            </li>
+                            <li class="mdui-list-item mdui-ripple">
+                                <i class="mdui-list-item-icon"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                        <path fill="currentColor"
+                                            d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z" />
+                                    </svg></i>
+                                <a class="mdui-list-item-content" href="https://t.me/makeding"
+                                    target="_telegram">makeding</a>
+                            </li>
+                            <li class="mdui-list-item mdui-ripple" mdui-tooltip="{content: '锁啦'}">
+                                <i class="mdui-list-item-icon"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                        <path fill="currentColor"
+                                            d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" />
+                                    </svg></i>
+                                <a class="mdui-list-item-content" href="https://twitter.com/wosign"
+                                    target="_telegram">wosign</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mdui-col-sm-12 mdui-col-md-6">
+                        <h2 class="subtitle">设备</h2>
+                        <ul class="mdui-list">
+                            <li class="mdui-list-item">
+                                <i class="mdui-list-item-icon mdui-icon material-icons">laptop_mac</i>
+                                <div class="mdui-list-item-content"><a href="https://support.apple.com/kb/SP754"
+                                        target="_macbookpro201713">MacBook Pro 2017 13</a></div>
+                            </li>
+                            <li class="mdui-list-item">
+                                <i class="mdui-list-item-icon mdui-icon material-icons">computer</i>
+                                <div class="mdui-list-item-content"><a
+                                        href="https://www.intel.cn/content/www/cn/zh/products/boards-kits/nuc/kits/nuc8i7beh.html"
+                                        target="_nuc8i7beh">NUC8i7BEH</a></div>
+                            </li>
+                            <li class="mdui-list-item">
+                                <i class="mdui-list-item-icon mdui-icon material-icons">menu</i>
+                                <div class="mdui-list-item-content">B350M + Ryzen 2400G + RX580</div>
+                            </li>
+                            <li class="mdui-list-item">
+                                <i class="mdui-list-item-icon mdui-icon material-icons">menu</i>
+                                <div class="mdui-list-item-content">J1900 / N2800 / N1</div>
+                            </li>
+                            <li class="mdui-list-item">
+                                <i class="mdui-list-item-icon mdui-icon material-icons">router</i>
+                                <div class="mdui-list-item-content">N3700 / RB750Gr3</div>
+                            </li>
+                            <li class="mdui-list-item">
+                                <i class="mdui-list-item-icon mdui-icon material-icons">router</i>
+                                <div class="mdui-list-item-content"><a href="https://github.com/xiao201261/R7500V2_lede"
+                                        target="_r7500v2">R7500V2</a> / AC68U</div>
+                            </li>
+                            <li class="mdui-list-item">
+                                <i class="mdui-list-item-icon mdui-icon material-icons">phone_android</i>
+                                <div class="mdui-list-item-content">LG V30 / Mi 6X / Yureka 2</div>
+                            </li>
+                            <li class="mdui-list-item">
+                                <i class="mdui-list-item-icon mdui-icon material-icons">phone_android</i>
+                                <div class="mdui-list-item-content">RedMi 4X / Sharp 304SH</div>
+                            </li>
+                            <li class="mdui-list-item">
+                                <i class="mdui-list-item-icon mdui-icon material-icons">phone_android</i>
+                                <div class="mdui-list-item-content">Xperia X Compact</div>
+                            </li>
+                            <li class="mdui-list-item">
+                                <i class="mdui-list-item-icon mdui-icon material-icons">phone_iphone</i>
+                                <div class="mdui-list-item-content">iPhone 7 / iPhone7 Plus</div>
+                            </li>
+                            <li class="mdui-list-item">
+                                <i class="mdui-list-item-icon mdui-icon material-icons">watch</i>
+                                <div class="mdui-list-item-content">Apple Watch Series 3</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="mdui-col-sm-12 mdui-col-md-6">
+                        <h2 class="subtitle">项目</h2>
+                        <ul class="mdui-list">
+                            <li class="mdui-list-item mdui-ripple">
+                                <i class="mdui-list-item-icon"><img src="./icons/anquan.png"
+                                        style="border-radius: 50%;height: 24px;width: 24px;"></i>
+                                <a class="mdui-list-item-content" href="https://anquan.huggy.moe"
+                                    target="_anquan">安全教育平台助手</a>
+                            </li>
+                            <li class="mdui-list-item mdui-ripple" mdui-tooltip="{content: '无情都加空格机器'}">
+                                <i class="mdui-list-item-icon"><svg viewBox="0 0 24 24">
+                                        <path fill="currentColor"
+                                            d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z" />
+                                    </svg></i>
+                                <a class="mdui-list-item-content" href="https://t.me/rewrite_bot"
+                                    target="_rewrite_bot">rewrite_bot</a>
+                            </li>
+                            <li class="mdui-list-item mdui-ripple" mdui-tooltip="{content: '一言'}">
+                                <i class="mdui-list-item-icon"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                        <path fill="currentColor"
+                                            d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z" />
+                                    </svg></i>
+                                <a class="mdui-list-item-content" href="https://t.me/hitokoto_bot"
+                                    target="_hitokoto_bot">hitokoto_bot</a>
+                            </li>
+                            <li class="mdui-list-item mdui-ripple" mdui-tooltip="{content: '远景论坛邀请码'}">
+                                <i class="mdui-list-item-icon"><svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                        <path fill="currentColor"
+                                            d="M9.78,18.65L10.06,14.42L17.74,7.5C18.08,7.19 17.67,7.04 17.22,7.31L7.74,13.3L3.64,12C2.76,11.75 2.75,11.14 3.84,10.7L19.81,4.54C20.54,4.21 21.24,4.72 20.96,5.84L18.24,18.65C18.05,19.56 17.5,19.78 16.74,19.36L12.6,16.3L10.61,18.23C10.38,18.46 10.19,18.65 9.78,18.65Z" />
+                                    </svg></i>
+                                <a class="mdui-list-item-content" href="https://t.me/pcbeta_bot"
+                                    target="_pcbeta_bot">pcbeta_bot</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mdui-card page">
+            <div class="mdui-card-content">
+                Copyright © huggy, 2014 - 2020
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/mdui@1.0.0/dist/js/mdui.min.js"
+        integrity="sha384-aB8rnkAu/GBsQ1q6dwTySnlrrbhqDwrDnpVHR2Wgm8pWLbwUnzDcIROX3VvCbaK+"
+        crossorigin="anonymous"></script>
+
+</html>
