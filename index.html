@@ -8,6 +8,18 @@
         integrity="sha384-2PJ2u4NYg6jCNNpv3i1hK9AoAqODy6CdiC+gYiL2DVx+ku5wzJMFNdE3RoWfBIRP" crossorigin="anonymous" />
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <style>
+        @media (prefers-color-scheme: light) {
+            #anquan {
+                filter: invert(50%);
+            }
+        }
+
+        #anquan {
+            border-radius: 50%;
+            height: 24px;
+            width: 24px;
+        }
+
         .page {
             opacity: .89;
             margin-bottom: 6.4px;
@@ -45,9 +57,9 @@
                 <br>
                 前端凑合，抄一抄 改一改的水平
                 <br>
-                有搞黑苹果，也有买白苹果
-                <br>
                 3 大桌面平台通吃，操作都顺手 Windows/macOS/Linux (KDE/Deepin/GNOME/Xfce)
+                <br>
+                目前主力 macOS 有黑苹果 也有白苹果
                 <br>
                 熟悉 Linux 基本操作<del>以及删裤</del>
                 <br>
@@ -190,6 +202,10 @@
                                 <div class="mdui-list-item-content">iPhone 7 / iPhone7 Plus</div>
                             </li>
                             <li class="mdui-list-item">
+                                <i class="mdui-list-item-icon mdui-icon material-icons">phone_iphone</i>
+                                <div class="mdui-list-item-content">iPhone SE (gen1)</div>
+                            </li>
+                            <li class="mdui-list-item">
                                 <i class="mdui-list-item-icon mdui-icon material-icons">hearing</i>
                                 <div class="mdui-list-item-content">AirPods Pro</div>
                             </li>
@@ -207,11 +223,15 @@
                                 <a class="mdui-list-item-content" href="https://hkhoster.com"
                                     target="_hkhoster"><del>hkhoster</del></a>
                             </li>
-                            <li class="mdui-list-item mdui-ripple">
-                                <i class="mdui-list-item-icon"><img src="./icons/anquan.png"
-                                        style="border-radius: 50%;height: 24px;width: 24px;"></i>
+                            <li class="mdui-list-item mdui-ripple" mdui-tooltip="{content: '自动完成全班任务'}">
+                                <i class="mdui-list-item-icon"><img id="anquan" src="./icons/anquan.png"></i>
                                 <a class="mdui-list-item-content" href="https://anquan.huggy.moe"
                                     target="_anquan">安全教育平台助手</a>
+                            </li>
+                            <li class="mdui-list-item mdui-ripple" mdui-tooltip="{content: 'Aria2 禁止吸血雷等 BT 软件吸血'}">
+                                <i class="mdui-list-item-icon mdui-icon material-icons">cancel</i>
+                                <a class="mdui-list-item-content" href="https://github.com/makeding/aria2_ban_thunder"
+                                    target="_aria2">Aria2 禁止吸血</a>
                             </li>
                             <li class="mdui-list-item mdui-ripple"
                                 mdui-tooltip="{content: '无情的加空格机器，cloudflare worker 版'}">
@@ -244,8 +264,8 @@
             </div>
         </div>
         <div class="mdui-card page">
-            <div class="mdui-card-content" style="text-align: right;">
-                Copyright © huggy, 2014 - 2020
+            <div class="mdui-card-content">
+                Copyright © huggy, 2020
             </div>
         </div>
     </div>
